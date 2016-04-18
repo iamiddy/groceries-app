@@ -13,6 +13,7 @@
 		DE6431D11CC5984300F2662B /* GroceriesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE6431CF1CC5984300F2662B /* GroceriesApp.xcdatamodeld */; };
 		DE6431D31CC5984300F2662B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE6431D21CC5984300F2662B /* Assets.xcassets */; };
 		DE6431D61CC5984300F2662B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6431D41CC5984300F2662B /* LaunchScreen.storyboard */; };
+		DE6431E11CC5A03200F2662B /* GenericViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6431E01CC5A03200F2662B /* GenericViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DE6431D21CC5984300F2662B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE6431D51CC5984300F2662B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE6431D71CC5984300F2662B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE6431E01CC5A03200F2662B /* GenericViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		DE6431C71CC5984200F2662B /* GroceriesApp */ = {
 			isa = PBXGroup;
 			children = (
+				DE6431DD1CC59F7000F2662B /* Generic Classes */,
 				DE6431C81CC5984300F2662B /* AppDelegate.swift */,
 				DE6431CA1CC5984300F2662B /* ViewController.swift */,
 				DE6431CC1CC5984300F2662B /* Main.storyboard */,
@@ -65,6 +68,14 @@
 				DE6431CF1CC5984300F2662B /* GroceriesApp.xcdatamodeld */,
 			);
 			path = GroceriesApp;
+			sourceTree = "<group>";
+		};
+		DE6431DD1CC59F7000F2662B /* Generic Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DE6431E01CC5A03200F2662B /* GenericViewController.swift */,
+			);
+			name = "Generic Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 			files = (
 				DE6431CB1CC5984300F2662B /* ViewController.swift in Sources */,
 				DE6431D11CC5984300F2662B /* GroceriesApp.xcdatamodeld in Sources */,
+				DE6431E11CC5A03200F2662B /* GenericViewController.swift in Sources */,
 				DE6431C91CC5984300F2662B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
