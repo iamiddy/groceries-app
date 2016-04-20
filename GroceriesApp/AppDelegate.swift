@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func demo(){
       //  loadMeasurementsSamples()
-        fetch50Measurements()
+        //fetch50Measurements()
+        fetch50Amounts()
         
     }
     
@@ -38,6 +39,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Error executing fetchRequest: \(error)")
         }
         CDHelper.saveSharedContext()
+    }
+    func fetch50Amounts(){
+        let context = CDHelper.shared.context
+        let request = NSFetchRequest(entityName: "Amount")
+        let sort = NSSortDescriptor(key: "xyz", ascending: true)
+        request.sortDescriptors = [sort]
+        request.fetchOffset = 0
+        request.fetchLimit = 50
+        
+        do{
+            if let amounts = try context.executeFetchRequest(request) as? [Amount]{
+                for a in amounts {
+                    print("Fetched Amount Object \(a.xyz!)")
+                }
+                
+            }
+        }catch{ print("ERROR executing fetch request: \(error)")}
     }
     
     func fetch50Measurements(){

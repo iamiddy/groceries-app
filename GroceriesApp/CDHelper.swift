@@ -68,7 +68,7 @@ class CDHelper: NSObject{
     
     //MARK: - STORE
     lazy var localStore: NSPersistentStore? = {
-        let options:[NSObject:AnyObject] = [NSSQLitePragmasOption:["journal_mode":"DELETE"], NSMigratePersistentStoresAutomaticallyOption:1, NSInferMappingModelAutomaticallyOption:1]
+        let options:[NSObject:AnyObject] = [NSSQLitePragmasOption:["journal_mode":"DELETE"], NSMigratePersistentStoresAutomaticallyOption:1, NSInferMappingModelAutomaticallyOption:0] // default infer 1
         var _localStore:NSPersistentStore?
         do{
             _localStore = try self.coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: self.localStoreURL, options: options)
