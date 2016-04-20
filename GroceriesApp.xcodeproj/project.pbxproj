@@ -16,6 +16,8 @@
 		DE6431E31CC5AB9300F2662B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE6431E21CC5AB9300F2662B /* CoreData.framework */; };
 		DE6431E61CC5ACDE00F2662B /* CDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6431E51CC5ACDE00F2662B /* CDHelper.swift */; };
 		DE6431EA1CC5C75F00F2662B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE6431E81CC5C75F00F2662B /* Model.xcdatamodeld */; };
+		DE6431ED1CC6EBF400F2662B /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6431EB1CC6EBF400F2662B /* Item+CoreDataProperties.swift */; };
+		DE6431EE1CC6EBF400F2662B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6431EC1CC6EBF400F2662B /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		DE6431E21CC5AB9300F2662B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		DE6431E51CC5ACDE00F2662B /* CDHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDHelper.swift; sourceTree = "<group>"; };
 		DE6431E91CC5C75F00F2662B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		DE6431EB1CC6EBF400F2662B /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DE6431EC1CC6EBF400F2662B /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 		DE6431E71CC5C72D00F2662B /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				DE6431EB1CC6EBF400F2662B /* Item+CoreDataProperties.swift */,
+				DE6431EC1CC6EBF400F2662B /* Item.swift */,
 				DE6431E81CC5C75F00F2662B /* Model.xcdatamodeld */,
 			);
 			name = "Data Model";
@@ -173,9 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE6431ED1CC6EBF400F2662B /* Item+CoreDataProperties.swift in Sources */,
 				DE6431CB1CC5984300F2662B /* ViewController.swift in Sources */,
 				DE6431E61CC5ACDE00F2662B /* CDHelper.swift in Sources */,
 				DE6431E11CC5A03200F2662B /* GenericViewController.swift in Sources */,
+				DE6431EE1CC6EBF400F2662B /* Item.swift in Sources */,
 				DE6431C91CC5984300F2662B /* AppDelegate.swift in Sources */,
 				DE6431EA1CC5C75F00F2662B /* Model.xcdatamodeld in Sources */,
 			);
