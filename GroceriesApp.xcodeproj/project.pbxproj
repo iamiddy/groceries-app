@@ -18,6 +18,8 @@
 		DE6431EA1CC5C75F00F2662B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE6431E81CC5C75F00F2662B /* Model.xcdatamodeld */; };
 		DE6431ED1CC6EBF400F2662B /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6431EB1CC6EBF400F2662B /* Item+CoreDataProperties.swift */; };
 		DE6431EE1CC6EBF400F2662B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6431EC1CC6EBF400F2662B /* Item.swift */; };
+		DE6431FE1CC71FBA00F2662B /* Measurement+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6431FC1CC71FBA00F2662B /* Measurement+CoreDataProperties.swift */; };
+		DE6431FF1CC71FBA00F2662B /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6431FD1CC71FBA00F2662B /* Measurement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		DE6431EB1CC6EBF400F2662B /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DE6431EC1CC6EBF400F2662B /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		DE6431EF1CC7161100F2662B /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
+		DE6431FC1CC71FBA00F2662B /* Measurement+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Measurement+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DE6431FD1CC71FBA00F2662B /* Measurement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 		DE6431E71CC5C72D00F2662B /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				DE6431FC1CC71FBA00F2662B /* Measurement+CoreDataProperties.swift */,
+				DE6431FD1CC71FBA00F2662B /* Measurement.swift */,
 				DE6431EB1CC6EBF400F2662B /* Item+CoreDataProperties.swift */,
 				DE6431EC1CC6EBF400F2662B /* Item.swift */,
 				DE6431E81CC5C75F00F2662B /* Model.xcdatamodeld */,
@@ -180,10 +186,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE6431FE1CC71FBA00F2662B /* Measurement+CoreDataProperties.swift in Sources */,
 				DE6431ED1CC6EBF400F2662B /* Item+CoreDataProperties.swift in Sources */,
 				DE6431CB1CC5984300F2662B /* ViewController.swift in Sources */,
 				DE6431E61CC5ACDE00F2662B /* CDHelper.swift in Sources */,
 				DE6431E11CC5A03200F2662B /* GenericViewController.swift in Sources */,
+				DE6431FF1CC71FBA00F2662B /* Measurement.swift in Sources */,
 				DE6431EE1CC6EBF400F2662B /* Item.swift in Sources */,
 				DE6431C91CC5984300F2662B /* AppDelegate.swift in Sources */,
 				DE6431EA1CC5C75F00F2662B /* Model.xcdatamodeld in Sources */,

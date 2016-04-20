@@ -14,10 +14,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     //Debug -com.apple.CoreData.SQLDebug 3
+    
     func demo(){
+      //  loadMeasurementsSamples()
+        fetch50Measurements()
+        
+    }
+    
+    func demo_delete(){
         
         let context = CDHelper.shared.context
         let request = NSFetchRequest(entityName: "Item")
+        
         
         do{
             if let items =  try CDHelper.shared.context.executeFetchRequest(request) as? [Item] {
@@ -28,6 +36,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }catch{
             print("Error executing fetchRequest: \(error)")
+        }
+        CDHelper.saveSharedContext()
+    }
+    
+    func fetch50Measurements(){
+        let context = CDHelper.shared.context
+        let request = NSFetchRequest(entityName: "Measurement")
+         let sort = NSSortDescriptor(key: "abc", ascending: true)
+        request.sortDescriptors = [sort]
+        request.fetchOffset = 0
+        request.fetchLimit = 50
+        
+        do{
+            if let measurements = try context.executeFetchRequest(request) as? [Measurement]{
+                for m in measurements {
+                    print("Fetched Measurement Object \(m.abc!)")
+                }
+                
+            }
+        }catch{ print("ERROR executing fetch request: \(error)")}
+    }
+    
+    func loadMeasurementsSamples(){
+        let conetx = CDHelper.shared.context
+        
+        for i in 0...5000 {
+            if let newMeasurement = NSEntityDescription.insertNewObjectForEntityForName("Measurement", inManagedObjectContext: conetx) as? Measurement{
+                newMeasurement.abc = "-->> LOTS OF TEST DATA x\(i)"
+                print("Inserted \(newMeasurement.abc)")
+            }
         }
     }
     
