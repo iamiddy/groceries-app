@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       //  loadMeasurementsSamples()
         //fetch50Measurements()
       //  fetch50Amounts()
-        fetch50Unit ()
+       // fetch50Unit ()
+        CDHelper.shared
         
     }
     
