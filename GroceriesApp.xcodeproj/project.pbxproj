@@ -23,6 +23,12 @@
 		DE6432031CC7279D00F2662B /* Amount+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6432011CC7279D00F2662B /* Amount+CoreDataProperties.swift */; };
 		DE6432041CC7279D00F2662B /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6432021CC7279D00F2662B /* Amount.swift */; };
 		DE6432061CC72A0400F2662B /* Model2ToModel3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = DE6432051CC72A0400F2662B /* Model2ToModel3.xcmappingmodel */; };
+		DE6432091CC7334E00F2662B /* MigrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6432081CC7334E00F2662B /* MigrationViewController.swift */; };
+		DE64320B1CC737EC00F2662B /* CDMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64320A1CC737EC00F2662B /* CDMigration.swift */; };
+		DE64320D1CC86C0700F2662B /* PrepareTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64320C1CC86C0700F2662B /* PrepareTableTableViewController.swift */; };
+		DE6432111CC86E1300F2662B /* Unit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64320F1CC86E1300F2662B /* Unit+CoreDataProperties.swift */; };
+		DE6432121CC86E1300F2662B /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6432101CC86E1300F2662B /* Unit.swift */; };
+		DE6432141CC86E4D00F2662B /* Model3ToModel4.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = DE6432131CC86E4D00F2662B /* Model3ToModel4.xcmappingmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +52,13 @@
 		DE6432011CC7279D00F2662B /* Amount+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Amount+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DE6432021CC7279D00F2662B /* Amount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
 		DE6432051CC72A0400F2662B /* Model2ToModel3.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Model2ToModel3.xcmappingmodel; sourceTree = "<group>"; };
+		DE6432081CC7334E00F2662B /* MigrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MigrationViewController.swift; sourceTree = "<group>"; };
+		DE64320A1CC737EC00F2662B /* CDMigration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDMigration.swift; sourceTree = "<group>"; };
+		DE64320C1CC86C0700F2662B /* PrepareTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareTableTableViewController.swift; sourceTree = "<group>"; };
+		DE64320E1CC86D8600F2662B /* Model 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 4.xcdatamodel"; sourceTree = "<group>"; };
+		DE64320F1CC86E1300F2662B /* Unit+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Unit+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DE6432101CC86E1300F2662B /* Unit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		DE6432131CC86E4D00F2662B /* Model3ToModel4.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Model3ToModel4.xcmappingmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +93,7 @@
 		DE6431C71CC5984200F2662B /* GroceriesApp */ = {
 			isa = PBXGroup;
 			children = (
+				DE6432071CC7331700F2662B /* View Controllers */,
 				DE6431E71CC5C72D00F2662B /* Data Model */,
 				DE6431E41CC5ACA500F2662B /* Generic Core Data Classes */,
 				DE6431DD1CC59F7000F2662B /* Generic Classes */,
@@ -97,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				DE6431E01CC5A03200F2662B /* GenericViewController.swift */,
+				DE64320A1CC737EC00F2662B /* CDMigration.swift */,
 			);
 			name = "Generic Classes";
 			sourceTree = "<group>";
@@ -112,6 +127,8 @@
 		DE6431E71CC5C72D00F2662B /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				DE64320F1CC86E1300F2662B /* Unit+CoreDataProperties.swift */,
+				DE6432101CC86E1300F2662B /* Unit.swift */,
 				DE6432011CC7279D00F2662B /* Amount+CoreDataProperties.swift */,
 				DE6432021CC7279D00F2662B /* Amount.swift */,
 				DE6431FC1CC71FBA00F2662B /* Measurement+CoreDataProperties.swift */,
@@ -119,9 +136,19 @@
 				DE6431EB1CC6EBF400F2662B /* Item+CoreDataProperties.swift */,
 				DE6431EC1CC6EBF400F2662B /* Item.swift */,
 				DE6431E81CC5C75F00F2662B /* Model.xcdatamodeld */,
+				DE6432131CC86E4D00F2662B /* Model3ToModel4.xcmappingmodel */,
 				DE6432051CC72A0400F2662B /* Model2ToModel3.xcmappingmodel */,
 			);
 			name = "Data Model";
+			sourceTree = "<group>";
+		};
+		DE6432071CC7331700F2662B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DE6432081CC7334E00F2662B /* MigrationViewController.swift */,
+				DE64320C1CC86C0700F2662B /* PrepareTableTableViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,15 +226,21 @@
 				DE6431FE1CC71FBA00F2662B /* Measurement+CoreDataProperties.swift in Sources */,
 				DE6432061CC72A0400F2662B /* Model2ToModel3.xcmappingmodel in Sources */,
 				DE6432031CC7279D00F2662B /* Amount+CoreDataProperties.swift in Sources */,
+				DE6432111CC86E1300F2662B /* Unit+CoreDataProperties.swift in Sources */,
 				DE6431ED1CC6EBF400F2662B /* Item+CoreDataProperties.swift in Sources */,
 				DE6431CB1CC5984300F2662B /* ViewController.swift in Sources */,
 				DE6431E61CC5ACDE00F2662B /* CDHelper.swift in Sources */,
 				DE6431E11CC5A03200F2662B /* GenericViewController.swift in Sources */,
+				DE64320D1CC86C0700F2662B /* PrepareTableTableViewController.swift in Sources */,
 				DE6432041CC7279D00F2662B /* Amount.swift in Sources */,
 				DE6431FF1CC71FBA00F2662B /* Measurement.swift in Sources */,
 				DE6431EE1CC6EBF400F2662B /* Item.swift in Sources */,
+				DE6432091CC7334E00F2662B /* MigrationViewController.swift in Sources */,
+				DE6432141CC86E4D00F2662B /* Model3ToModel4.xcmappingmodel in Sources */,
+				DE6432121CC86E1300F2662B /* Unit.swift in Sources */,
 				DE6431C91CC5984300F2662B /* AppDelegate.swift in Sources */,
 				DE6431EA1CC5C75F00F2662B /* Model.xcdatamodeld in Sources */,
+				DE64320B1CC737EC00F2662B /* CDMigration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,11 +398,12 @@
 		DE6431E81CC5C75F00F2662B /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				DE64320E1CC86D8600F2662B /* Model 4.xcdatamodel */,
 				DE6432001CC7270100F2662B /* Model 3.xcdatamodel */,
 				DE6431EF1CC7161100F2662B /* Model 2.xcdatamodel */,
 				DE6431E91CC5C75F00F2662B /* Model.xcdatamodel */,
 			);
-			currentVersion = DE6432001CC7270100F2662B /* Model 3.xcdatamodel */;
+			currentVersion = DE64320E1CC86D8600F2662B /* Model 4.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

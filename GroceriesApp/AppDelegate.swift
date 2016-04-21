@@ -18,8 +18,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func demo(){
       //  loadMeasurementsSamples()
         //fetch50Measurements()
-        fetch50Amounts()
+      //  fetch50Amounts()
+        fetch50Unit ()
         
+    }
+    
+    func fetch50Unit () {
+        let context = CDHelper.shared.context
+        let request = NSFetchRequest(entityName: "Unit")
+        request.fetchLimit = 50
+        do {
+            if let units = try context.executeFetchRequest(request) as? [Unit] {
+                for unit in units {
+                    print("Fetched Unit Object \(unit.name!)")
+                } }
+        } catch {
+            print("ERROR executing a fetch request: \(error)")
+        }
     }
     
     func demo_delete(){
@@ -139,7 +154,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        CDHelper.shared
+       // CDHelper.shared
         return true
     }
 
@@ -160,7 +175,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        demo()
+      //  demo()
     }
 
     func applicationWillTerminate(application: UIApplication) {

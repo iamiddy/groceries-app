@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -23,10 +24,51 @@
             </objects>
             <point key="canvasLocation" x="1600.5" y="-215.5"/>
         </scene>
+        <!--Migration Controller-->
+        <scene sceneID="bYR-ST-1fH">
+            <objects>
+                <viewController storyboardIdentifier="migration" id="6e4-6r-rju" userLabel="Migration Controller" customClass="MigrationViewController" customModule="GroceriesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Ik-1C-ARr"/>
+                        <viewControllerLayoutGuide type="bottom" id="eFE-8N-46f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hXx-Xf-iIF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Migration Progress 0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhr-Zp-a8V">
+                                <rect key="frame" x="20" y="270" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lvY-mN-2eR">
+                                <rect key="frame" x="20" y="299" width="560" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bhr-Zp-a8V" firstAttribute="trailing" secondItem="lvY-mN-2eR" secondAttribute="trailing" id="Nw4-NQ-0G9"/>
+                            <constraint firstItem="lvY-mN-2eR" firstAttribute="centerY" secondItem="hXx-Xf-iIF" secondAttribute="centerY" id="WCt-GH-F7M"/>
+                            <constraint firstItem="Bhr-Zp-a8V" firstAttribute="leading" secondItem="hXx-Xf-iIF" secondAttribute="leadingMargin" id="Yiw-0k-985"/>
+                            <constraint firstItem="lvY-mN-2eR" firstAttribute="top" secondItem="Bhr-Zp-a8V" secondAttribute="bottom" constant="8" symbolic="YES" id="kfW-4T-x0I"/>
+                            <constraint firstItem="Bhr-Zp-a8V" firstAttribute="trailing" secondItem="hXx-Xf-iIF" secondAttribute="trailingMargin" id="m6C-3X-y0x"/>
+                            <constraint firstItem="Bhr-Zp-a8V" firstAttribute="leading" secondItem="lvY-mN-2eR" secondAttribute="leading" id="pzW-aI-hyV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="Bhr-Zp-a8V" id="erl-rO-Fa3"/>
+                        <outlet property="progressView" destination="lvY-mN-2eR" id="BjX-NN-vKL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hnj-pK-UAC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="39" y="438"/>
+        </scene>
         <!--Groceries-->
         <scene sceneID="Qz6-kM-5MU">
             <objects>
-                <tableViewController id="Zvn-0O-Gln" sceneMemberID="viewController">
+                <tableViewController id="Zvn-0O-Gln" customClass="PrepareTableTableViewController" customModule="GroceriesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tUg-YS-qzo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

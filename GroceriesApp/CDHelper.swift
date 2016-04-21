@@ -24,6 +24,11 @@ class CDHelper: NSObject{
     }
     
     func setupCoreData(){
+        // Model Migration
+        if let _localStoreURL = self.localStoreURL {
+            CDMigration.shared.migrateStoreIfNecessary(_localStoreURL, destinationModel: self.model)
+        }
+
         _ = self.localStore
     }
     
@@ -68,7 +73,14 @@ class CDHelper: NSObject{
     
     //MARK: - STORE
     lazy var localStore: NSPersistentStore? = {
-        let options:[NSObject:AnyObject] = [NSSQLitePragmasOption:["journal_mode":"DELETE"], NSMigratePersistentStoresAutomaticallyOption:1, NSInferMappingModelAutomaticallyOption:0] // default infer 1
+        let useMigrationManager = true
+        if let _localStoreURL = self.localStoreURL {
+            if useMigrationManager == true && CDMigration.shared.storeExistsAtPath(_localStoreURL) && CDMigration.shared.store(_localStoreURL, isCompatibleWithModel:
+                self.model) == false {
+                return nil // Don't return a store if it's not compatible with the model
+            } }
+
+        let options:[NSObject:AnyObject] = [NSSQLitePragmasOption:["journal_mode":"DELETE"], NSMigratePersistentStoresAutomaticallyOption:0, NSInferMappingModelAutomaticallyOption:0] // 1,default infer 1
         var _localStore:NSPersistentStore?
         do{
             _localStore = try self.coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: self.localStoreURL, options: options)
