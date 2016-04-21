@@ -15,5 +15,6 @@ import CoreData
 extension Unit {
 
     @NSManaged var name: String?
+    @NSManaged var items: NSSet?
 
 }

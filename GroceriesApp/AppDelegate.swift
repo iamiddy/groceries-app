@@ -20,7 +20,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //fetch50Measurements()
       //  fetch50Amounts()
        // fetch50Unit ()
-        CDHelper.shared
+        //CDHelper.shared
+       // insertCoupleItems()
+        CDOperation.objectCountForEntity("Item", context: CDHelper.shared.context)
+        CDOperation.objectCountForEntity("Unit", context: CDHelper.shared.context)
+        
+    }
+    
+    func insertCoupleItems(){
+        let context = CDHelper.shared.context
+        if let kg = NSEntityDescription.insertNewObjectForEntityForName("Unit", inManagedObjectContext: context) as? Unit ,
+            let oranges = NSEntityDescription.insertNewObjectForEntityForName("Item", inManagedObjectContext: context) as? Item ,
+            let bananas = NSEntityDescription.insertNewObjectForEntityForName("Item", inManagedObjectContext: context) as? Item {
+            
+            kg.name = "Kg"
+            oranges.name = "Oranges"
+            bananas.name = "Bananas"
+            oranges.quantity = NSNumber(float: 1)
+            bananas.quantity = NSNumber(float: 4)
+            oranges.listed = NSNumber(bool: true)
+            bananas.listed = NSNumber(bool: true)
+            oranges.unit = kg
+            bananas.unit = kg
+            
+            print("Inserted \(oranges.quantity!) \(oranges.unit!.name!) of \(oranges.name!)")
+            print("Inserted \(bananas.quantity!) \(bananas.unit!.name!) of \(bananas.name!)")
+            
+            CDHelper.saveSharedContext()
+
+        }
+        
+        
         
     }
     

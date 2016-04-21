@@ -2,7 +2,7 @@
 //  Item+CoreDataProperties.swift
 //  GroceriesApp
 //
-//  Created by Iddy Magohe on 4/19/16.
+//  Created by Iddy Magohe on 4/20/16.
 //  Copyright © 2016 Iddy Magohe. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -14,10 +14,11 @@ import CoreData
 
 extension Item {
 
-    @NSManaged var name: String?
-    @NSManaged var quantity: NSNumber?
-    @NSManaged var photoData: NSData?
-    @NSManaged var listed: NSNumber?
     @NSManaged var collected: NSNumber?
+    @NSManaged var listed: NSNumber?
+    @NSManaged var name: String?
+    @NSManaged var photoData: NSData?
+    @NSManaged var quantity: NSNumber?
+    @NSManaged var unit: Unit?
 
 }
