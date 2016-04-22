@@ -10,7 +10,7 @@
     </entity>
     <entity name="Unit" representedClassName=".Unit" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" defaultValueString="New Unit" syncable="YES"/>
-        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="unit" inverseEntity="Item" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="Item" inverseName="unit" inverseEntity="Item" syncable="YES"/>
     </entity>
     <fetchRequest name="Test" entity="Item" predicateString="name CONTAINS &quot;e&quot;"/>
     <elements>

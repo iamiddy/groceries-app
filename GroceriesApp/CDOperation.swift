@@ -10,6 +10,7 @@ import Foundation
 import CoreData
 
 class CDOperation {
+    
     class func objectCountForEntity(entityName: String, context: NSManagedObjectContext) -> Int {
         let request = NSFetchRequest(entityName: entityName)
         var error:NSError?
@@ -21,4 +22,31 @@ class CDOperation {
         }
         return count
     }
+    
+    class func objectsForEntity(entityName: String, context: NSManagedObjectContext, filter:NSPredicate?, sort:[NSSortDescriptor]?) -> [AnyObject]?{
+        let fetchRequest = NSFetchRequest(entityName: entityName)
+        fetchRequest.predicate = filter
+        fetchRequest.sortDescriptors = sort
+        do{
+             return try context.executeFetchRequest(fetchRequest)
+        }catch{
+            print("\(#function) FAILED to fetch objects for \(entityName) entity")
+            return nil
+        }
+    }
+    
+    class func objectName(object:NSManagedObject) -> String {
+        if let name = object.valueForKey("name") as? String {
+            return name
+        }
+        return object.description
+    }
+    
+    class func objectDeletionIsValid(object:NSManagedObject) -> Bool {
+        do {
+            try object.validateForDelete()
+            return true // object can be deleted
+        } catch let error as NSError { print("'\(objectName(object))' can't be deleted.\(error.localizedDescription)")
+            return false // object can't be deleted
+        } }
 }
