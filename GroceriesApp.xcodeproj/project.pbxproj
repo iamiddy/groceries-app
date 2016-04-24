@@ -18,8 +18,6 @@
 		DE6431EA1CC5C75F00F2662B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE6431E81CC5C75F00F2662B /* Model.xcdatamodeld */; };
 		DE6431ED1CC6EBF400F2662B /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6431EB1CC6EBF400F2662B /* Item+CoreDataProperties.swift */; };
 		DE6431EE1CC6EBF400F2662B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6431EC1CC6EBF400F2662B /* Item.swift */; };
-		DE6431FE1CC71FBA00F2662B /* Measurement+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6431FC1CC71FBA00F2662B /* Measurement+CoreDataProperties.swift */; };
-		DE6431FF1CC71FBA00F2662B /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6431FD1CC71FBA00F2662B /* Measurement.swift */; };
 		DE6432031CC7279D00F2662B /* Amount+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6432011CC7279D00F2662B /* Amount+CoreDataProperties.swift */; };
 		DE6432041CC7279D00F2662B /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6432021CC7279D00F2662B /* Amount.swift */; };
 		DE6432061CC72A0400F2662B /* Model2ToModel3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = DE6432051CC72A0400F2662B /* Model2ToModel3.xcmappingmodel */; };
@@ -30,6 +28,14 @@
 		DE6432121CC86E1300F2662B /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6432101CC86E1300F2662B /* Unit.swift */; };
 		DE6432141CC86E4D00F2662B /* Model3ToModel4.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = DE6432131CC86E4D00F2662B /* Model3ToModel4.xcmappingmodel */; };
 		DE6432171CC87B7E00F2662B /* CDOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6432161CC87B7E00F2662B /* CDOperation.swift */; };
+		DE64321F1CCAE8BF00F2662B /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6432191CCAE8BF00F2662B /* Location+CoreDataProperties.swift */; };
+		DE6432201CCAE8BF00F2662B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64321A1CCAE8BF00F2662B /* Location.swift */; };
+		DE6432211CCAE8BF00F2662B /* LocationAtShop+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64321B1CCAE8BF00F2662B /* LocationAtShop+CoreDataProperties.swift */; };
+		DE6432221CCAE8BF00F2662B /* LocationAtShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64321C1CCAE8BF00F2662B /* LocationAtShop.swift */; };
+		DE6432231CCAE8BF00F2662B /* LocationAtHome+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64321D1CCAE8BF00F2662B /* LocationAtHome+CoreDataProperties.swift */; };
+		DE6432241CCAE8BF00F2662B /* LocationAtHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64321E1CCAE8BF00F2662B /* LocationAtHome.swift */; };
+		DE6432261CCAF83400F2662B /* CDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6432251CCAF83400F2662B /* CDTableViewController.swift */; };
+		DE6432281CCC751000F2662B /* ShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6432271CCC751000F2662B /* ShopTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,8 +53,6 @@
 		DE6431EB1CC6EBF400F2662B /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DE6431EC1CC6EBF400F2662B /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		DE6431EF1CC7161100F2662B /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
-		DE6431FC1CC71FBA00F2662B /* Measurement+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Measurement+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		DE6431FD1CC71FBA00F2662B /* Measurement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
 		DE6432001CC7270100F2662B /* Model 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 3.xcdatamodel"; sourceTree = "<group>"; };
 		DE6432011CC7279D00F2662B /* Amount+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Amount+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DE6432021CC7279D00F2662B /* Amount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
@@ -62,6 +66,15 @@
 		DE6432131CC86E4D00F2662B /* Model3ToModel4.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Model3ToModel4.xcmappingmodel; sourceTree = "<group>"; };
 		DE6432151CC873CA00F2662B /* Model 5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 5.xcdatamodel"; sourceTree = "<group>"; };
 		DE6432161CC87B7E00F2662B /* CDOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDOperation.swift; sourceTree = "<group>"; };
+		DE6432181CCADDA400F2662B /* Model 6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 6.xcdatamodel"; sourceTree = "<group>"; };
+		DE6432191CCAE8BF00F2662B /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DE64321A1CCAE8BF00F2662B /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		DE64321B1CCAE8BF00F2662B /* LocationAtShop+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocationAtShop+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DE64321C1CCAE8BF00F2662B /* LocationAtShop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationAtShop.swift; sourceTree = "<group>"; };
+		DE64321D1CCAE8BF00F2662B /* LocationAtHome+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocationAtHome+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DE64321E1CCAE8BF00F2662B /* LocationAtHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationAtHome.swift; sourceTree = "<group>"; };
+		DE6432251CCAF83400F2662B /* CDTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDTableViewController.swift; sourceTree = "<group>"; };
+		DE6432271CCC751000F2662B /* ShopTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +137,7 @@
 			children = (
 				DE6432161CC87B7E00F2662B /* CDOperation.swift */,
 				DE6431E51CC5ACDE00F2662B /* CDHelper.swift */,
+				DE6432251CCAF83400F2662B /* CDTableViewController.swift */,
 			);
 			name = "Generic Core Data Classes";
 			sourceTree = "<group>";
@@ -131,12 +145,16 @@
 		DE6431E71CC5C72D00F2662B /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				DE6432191CCAE8BF00F2662B /* Location+CoreDataProperties.swift */,
+				DE64321A1CCAE8BF00F2662B /* Location.swift */,
+				DE64321B1CCAE8BF00F2662B /* LocationAtShop+CoreDataProperties.swift */,
+				DE64321C1CCAE8BF00F2662B /* LocationAtShop.swift */,
+				DE64321D1CCAE8BF00F2662B /* LocationAtHome+CoreDataProperties.swift */,
+				DE64321E1CCAE8BF00F2662B /* LocationAtHome.swift */,
 				DE64320F1CC86E1300F2662B /* Unit+CoreDataProperties.swift */,
 				DE6432101CC86E1300F2662B /* Unit.swift */,
 				DE6432011CC7279D00F2662B /* Amount+CoreDataProperties.swift */,
 				DE6432021CC7279D00F2662B /* Amount.swift */,
-				DE6431FC1CC71FBA00F2662B /* Measurement+CoreDataProperties.swift */,
-				DE6431FD1CC71FBA00F2662B /* Measurement.swift */,
 				DE6431EB1CC6EBF400F2662B /* Item+CoreDataProperties.swift */,
 				DE6431EC1CC6EBF400F2662B /* Item.swift */,
 				DE6431E81CC5C75F00F2662B /* Model.xcdatamodeld */,
@@ -151,6 +169,7 @@
 			children = (
 				DE6432081CC7334E00F2662B /* MigrationViewController.swift */,
 				DE64320C1CC86C0700F2662B /* PrepareTableTableViewController.swift */,
+				DE6432271CCC751000F2662B /* ShopTableViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -227,22 +246,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE6431FE1CC71FBA00F2662B /* Measurement+CoreDataProperties.swift in Sources */,
 				DE6432061CC72A0400F2662B /* Model2ToModel3.xcmappingmodel in Sources */,
+				DE6432281CCC751000F2662B /* ShopTableViewController.swift in Sources */,
+				DE6432221CCAE8BF00F2662B /* LocationAtShop.swift in Sources */,
 				DE6432031CC7279D00F2662B /* Amount+CoreDataProperties.swift in Sources */,
 				DE6432111CC86E1300F2662B /* Unit+CoreDataProperties.swift in Sources */,
+				DE64321F1CCAE8BF00F2662B /* Location+CoreDataProperties.swift in Sources */,
 				DE6432171CC87B7E00F2662B /* CDOperation.swift in Sources */,
 				DE6431ED1CC6EBF400F2662B /* Item+CoreDataProperties.swift in Sources */,
 				DE6431CB1CC5984300F2662B /* ViewController.swift in Sources */,
 				DE6431E61CC5ACDE00F2662B /* CDHelper.swift in Sources */,
 				DE6431E11CC5A03200F2662B /* GenericViewController.swift in Sources */,
 				DE64320D1CC86C0700F2662B /* PrepareTableTableViewController.swift in Sources */,
+				DE6432231CCAE8BF00F2662B /* LocationAtHome+CoreDataProperties.swift in Sources */,
+				DE6432211CCAE8BF00F2662B /* LocationAtShop+CoreDataProperties.swift in Sources */,
 				DE6432041CC7279D00F2662B /* Amount.swift in Sources */,
-				DE6431FF1CC71FBA00F2662B /* Measurement.swift in Sources */,
+				DE6432201CCAE8BF00F2662B /* Location.swift in Sources */,
 				DE6431EE1CC6EBF400F2662B /* Item.swift in Sources */,
 				DE6432091CC7334E00F2662B /* MigrationViewController.swift in Sources */,
 				DE6432141CC86E4D00F2662B /* Model3ToModel4.xcmappingmodel in Sources */,
 				DE6432121CC86E1300F2662B /* Unit.swift in Sources */,
+				DE6432241CCAE8BF00F2662B /* LocationAtHome.swift in Sources */,
+				DE6432261CCAF83400F2662B /* CDTableViewController.swift in Sources */,
 				DE6431C91CC5984300F2662B /* AppDelegate.swift in Sources */,
 				DE6431EA1CC5C75F00F2662B /* Model.xcdatamodeld in Sources */,
 				DE64320B1CC737EC00F2662B /* CDMigration.swift in Sources */,
@@ -403,13 +428,14 @@
 		DE6431E81CC5C75F00F2662B /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				DE6432181CCADDA400F2662B /* Model 6.xcdatamodel */,
 				DE6432151CC873CA00F2662B /* Model 5.xcdatamodel */,
 				DE64320E1CC86D8600F2662B /* Model 4.xcdatamodel */,
 				DE6432001CC7270100F2662B /* Model 3.xcdatamodel */,
 				DE6431EF1CC7161100F2662B /* Model 2.xcdatamodel */,
 				DE6431E91CC5C75F00F2662B /* Model.xcdatamodel */,
 			);
-			currentVersion = DE6432151CC873CA00F2662B /* Model 5.xcdatamodel */;
+			currentVersion = DE6432181CCADDA400F2662B /* Model 6.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

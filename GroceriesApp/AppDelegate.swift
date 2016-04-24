@@ -22,9 +22,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        // fetch50Unit ()
         //CDHelper.shared
        // insertCoupleItems()
-        CDOperation.objectCountForEntity("Item", context: CDHelper.shared.context)
-        CDOperation.objectCountForEntity("Unit", context: CDHelper.shared.context)
+        //CDOperation.objectCountForEntity("Item", context: CDHelper.shared.context)
+       // CDOperation.objectCountForEntity("Unit", context: CDHelper.shared.context)
+        prepareTestData()
         
+    }
+    
+    func prepareTestData(){
+      
+        if CDOperation.objectCountForEntity("Item", context: CDHelper.shared.context) == 0 {
+            let context = CDHelper.shared.context
+            let homeLocations = ["Fruit Bowl", "Pantry", "Nursery", "Bathroom", "Fridge"]
+            let shopLocations = ["Produce", "Aisle 1" , "Aisle 2" , "Aisle 3", "Deli"]
+            let unitNames = ["g", "pkt", "box", "ml","kg"]
+            let itemNames = ["Grapes", "Biscuits", "Nappies","Shampoo", "Sausages"]
+            
+            var i = 0;
+            
+            for itemName in itemNames {
+                print("Inserting '\(itemName)'")
+                if let locationAtHome = NSEntityDescription.insertNewObjectForEntityForName("LocationAtHome", inManagedObjectContext: context) as? LocationAtHome ,
+                    let locationAtShop = NSEntityDescription.insertNewObjectForEntityForName("LocationAtShop", inManagedObjectContext: context) as? LocationAtShop ,
+                    let unit = NSEntityDescription.insertNewObjectForEntityForName("Unit", inManagedObjectContext: context) as? Unit ,
+                    let item = NSEntityDescription.insertNewObjectForEntityForName("Item", inManagedObjectContext: context) as? Item {
+                    locationAtHome.storedIn = homeLocations[i]
+                    locationAtShop.aisle = shopLocations[i]
+                    unit.name = unitNames[i]
+                    item.name = itemNames[i]
+                    item.locationAtHome = locationAtHome
+                    item.locationAtShop = locationAtShop
+                    item.unit = unit
+                    i += 1
+                }else { print("ERROR preparing items in \(#function)")}
+            }
+            print("Test data was Inserted")
+            CDHelper.saveSharedContext()
+        }
     }
     
     func insertCoupleItems(){
@@ -206,7 +239,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-      //  demo()
+      demo()
     }
 
     func applicationWillTerminate(application: UIApplication) {
