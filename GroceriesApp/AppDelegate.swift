@@ -137,34 +137,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }catch{ print("ERROR executing fetch request: \(error)")}
     }
     
-    func fetch50Measurements(){
-        let context = CDHelper.shared.context
-        let request = NSFetchRequest(entityName: "Measurement")
-         let sort = NSSortDescriptor(key: "abc", ascending: true)
-        request.sortDescriptors = [sort]
-        request.fetchOffset = 0
-        request.fetchLimit = 50
-        
-        do{
-            if let measurements = try context.executeFetchRequest(request) as? [Measurement]{
-                for m in measurements {
-                    print("Fetched Measurement Object \(m.abc!)")
-                }
-                
-            }
-        }catch{ print("ERROR executing fetch request: \(error)")}
-    }
-    
-    func loadMeasurementsSamples(){
-        let conetx = CDHelper.shared.context
-        
-        for i in 0...5000 {
-            if let newMeasurement = NSEntityDescription.insertNewObjectForEntityForName("Measurement", inManagedObjectContext: conetx) as? Measurement{
-                newMeasurement.abc = "-->> LOTS OF TEST DATA x\(i)"
-                print("Inserted \(newMeasurement.abc)")
-            }
-        }
-    }
+   
     
     func demo_fetchTemplate(){
         let model = CDHelper.shared.model
