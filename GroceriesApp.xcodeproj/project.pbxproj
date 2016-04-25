@@ -36,6 +36,7 @@
 		DE6432241CCAE8BF00F2662B /* LocationAtHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64321E1CCAE8BF00F2662B /* LocationAtHome.swift */; };
 		DE6432261CCAF83400F2662B /* CDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6432251CCAF83400F2662B /* CDTableViewController.swift */; };
 		DE6432281CCC751000F2662B /* ShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6432271CCC751000F2662B /* ShopTableViewController.swift */; };
+		DE64322A1CCD52F200F2662B /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6432291CCD52F200F2662B /* ItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		DE64321E1CCAE8BF00F2662B /* LocationAtHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationAtHome.swift; sourceTree = "<group>"; };
 		DE6432251CCAF83400F2662B /* CDTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDTableViewController.swift; sourceTree = "<group>"; };
 		DE6432271CCC751000F2662B /* ShopTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTableViewController.swift; sourceTree = "<group>"; };
+		DE6432291CCD52F200F2662B /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 				DE6432081CC7334E00F2662B /* MigrationViewController.swift */,
 				DE64320C1CC86C0700F2662B /* PrepareTableTableViewController.swift */,
 				DE6432271CCC751000F2662B /* ShopTableViewController.swift */,
+				DE6432291CCD52F200F2662B /* ItemViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				DE6432061CC72A0400F2662B /* Model2ToModel3.xcmappingmodel in Sources */,
 				DE6432281CCC751000F2662B /* ShopTableViewController.swift in Sources */,
 				DE6432221CCAE8BF00F2662B /* LocationAtShop.swift in Sources */,
+				DE64322A1CCD52F200F2662B /* ItemViewController.swift in Sources */,
 				DE6432031CC7279D00F2662B /* Amount+CoreDataProperties.swift in Sources */,
 				DE6432111CC86E1300F2662B /* Unit+CoreDataProperties.swift in Sources */,
 				DE64321F1CCAE8BF00F2662B /* Location+CoreDataProperties.swift in Sources */,

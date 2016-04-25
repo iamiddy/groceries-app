@@ -7,9 +7,24 @@
 //
 
 import UIKit
+import CoreData
 
 class GenericViewController: UIViewController {
+    var segueObject:NSManagedObject?
+    var selectedObject:NSManagedObject? {
+        if let object = self.segueObject{
+            return object
+        }
+        self.done()
+        return nil
+    }
 
+    
+    func done(){
+    //The selectedObject variable is set up in such a way that if the managed object disappears,
+    //for example, it is deleted on another device, then the view is dismissed and the table view displayed instead.
+        self.navigationController?.popViewControllerAnimated(true)
+    }
     func hideKeyboard(){
         self.view.endEditing(true)
     }

@@ -111,5 +111,28 @@ class ShopTableViewController: CDTableViewController {
         }
         CDHelper.saveSharedContext()
     }
+    
+    //MARK:- SEGUE
+    //Not Required new Items are not created 
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if let itemVC = segue.destinationViewController as? ItemViewController {
+//            if segue.identifier == "Add Item Segue" {
+//                let object = NSEntityDescription.insertNewObjectForEntityForName("Item", inManagedObjectContext: CDHelper.shared.context)
+//                itemVC.segueObject = object
+//            }else{
+//                print("Unidentified Segue Attempted")
+//            }
+//        }
+//    }
+    
+    override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
+        if let itemVC = self.storyboard?.instantiateViewControllerWithIdentifier("ItemVC") as? ItemViewController {
+            if let object = self.frc.objectAtIndexPath(indexPath) as? NSManagedObject {
+                itemVC.segueObject = object
+            }
+            
+            self.navigationController?.pushViewController(itemVC, animated: true)
+        }
+    }
 
 }
