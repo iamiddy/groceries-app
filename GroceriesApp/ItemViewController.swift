@@ -47,16 +47,60 @@ class ItemViewController: GenericViewController, UITextFieldDelegate {
             }
         }else{self.done()}
     }
+    
+    //MARK:- VIEW
+    //refreshes the interface using the values of the selected, managed object, provided there is one.
+    func refreshInterface(){
+        if let item = self.selectedObject as? Item {
+            self.itemName.text = item.name
+            self.itemQuantity.text = item.quantity?.stringValue
+        }else {
+            self.done()
+        }
+    
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenBackgroundIsTapped()
+        self.itemQuantity.delegate = self
+        self.itemName.delegate = self
+        //displays a Done button.
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(GenericViewController.done))
+        self.navigationItem.rightBarButtonItem = doneButton
 
         // Do any additional setup after loading the view.
+    }
+    
+   
+     //* The viewWillAppear function calls refreshInterface whenever the view is about to appear,
+     //* which ensures fresh data is visible.
+     //* It also shows the keyboard immediately when a new item is being created.
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.refreshInterface()
+        if self.itemName.text == "New Item" {
+            self.itemName.text = ""
+            self.itemName.becomeFirstResponder()
+        }
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        CDHelper.saveSharedContext()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK:- DATA
+    func validateItem() {
+        if let item = self.selectedObject as? Item {
+            Item.ensureHomeLocationIsNotNil(item)
+            Item.ensureShopLocationIsNotNil(item)
+        }else { self.done()}
     }
     
 

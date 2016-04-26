@@ -48,5 +48,15 @@ class CDOperation {
             return true // object can be deleted
         } catch let error as NSError { print("'\(objectName(object))' can't be deleted.\(error.localizedDescription)")
             return false // object can't be deleted
-        } }
+        }
+    }
+    
+    class func objectWithAttributeValueForEntity(entityName:String, context:NSManagedObjectContext, attribute:String, value:String) -> NSManagedObject?{
+        let predicate = NSPredicate(format: "%K == %@", attribute,value)
+        let objects = CDOperation.objectsForEntity(entityName, context: context, filter: predicate, sort: nil)
+        if let object = objects?.first as? NSManagedObject {
+            return object
+        }
+        return nil
+    }
 }

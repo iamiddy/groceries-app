@@ -59,6 +59,7 @@ class ShopTableViewController: CDTableViewController {
     //MARK: - VIEW
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        Item.ensureLocationAreNotNilForAllItems()
         self.performFetch()
     }
     
