@@ -7,13 +7,14 @@
 //
 
 import UIKit
-
-class ItemViewController: GenericViewController, UITextFieldDelegate {
+import CoreData
+class ItemViewController: GenericViewController, UITextFieldDelegate, CDPickerTextFieldDelegate {
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var itemName: UITextField!
     @IBOutlet var itemQuantity: UITextField!
     
-    
+    @IBOutlet var unitPickerTF: UintPickerTF!
+        
     //MARK:- DELEGATE: UITextField
     func textFieldDidBeginEditing(textField: UITextField) {
         switch textField {
@@ -22,6 +23,10 @@ class ItemViewController: GenericViewController, UITextFieldDelegate {
                 self.itemName.text = ""
             }
             break;
+            case self.unitPickerTF:
+                self.unitPickerTF.performFetch()
+                self.unitPickerTF.setSelectedRowForComponent(0)
+                break;
         default:
             break;
         }
@@ -54,6 +59,10 @@ class ItemViewController: GenericViewController, UITextFieldDelegate {
         if let item = self.selectedObject as? Item {
             self.itemName.text = item.name
             self.itemQuantity.text = item.quantity?.stringValue
+            
+            
+            self.unitPickerTF.text = item.unit?.name ?? ""
+            self.unitPickerTF.selectedTitle = item.unit?.name ?? ""
         }else {
             self.done()
         }
@@ -68,6 +77,8 @@ class ItemViewController: GenericViewController, UITextFieldDelegate {
         //displays a Done button.
         let doneButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(GenericViewController.done))
         self.navigationItem.rightBarButtonItem = doneButton
+        self.unitPickerTF.delegate = self
+        self.unitPickerTF.pickerDelegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -101,6 +112,21 @@ class ItemViewController: GenericViewController, UITextFieldDelegate {
             Item.ensureHomeLocationIsNotNil(item)
             Item.ensureShopLocationIsNotNil(item)
         }else { self.done()}
+    }
+    
+    // MARK: - DELEGATE: CDPickerTextFieldDelegate
+    func selectedObject(object: NSManagedObject, changedForPickerTF pickerTF: CDPickerTextField) {
+        if let item = self.selectedObject as? Item {
+            switch (pickerTF) {
+        case self.unitPickerTF:
+            if let unit = object as? Unit {
+                item.unit = unit
+            }
+            break; default:
+                break;
+            }
+        } else {self.done()}
+        self.refreshInterface()
     }
     
 

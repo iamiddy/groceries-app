@@ -37,6 +37,10 @@
 		DE6432261CCAF83400F2662B /* CDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6432251CCAF83400F2662B /* CDTableViewController.swift */; };
 		DE6432281CCC751000F2662B /* ShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6432271CCC751000F2662B /* ShopTableViewController.swift */; };
 		DE64322A1CCD52F200F2662B /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6432291CCD52F200F2662B /* ItemViewController.swift */; };
+		DE64322C1CD1AC3000F2662B /* UnitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64322B1CD1AC3000F2662B /* UnitsTableViewController.swift */; };
+		DE64322E1CD1AF9700F2662B /* UnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64322D1CD1AF9700F2662B /* UnitViewController.swift */; };
+		DE6432301CD1BDCF00F2662B /* CDPickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE64322F1CD1BDCF00F2662B /* CDPickerTextField.swift */; };
+		DE6432331CD1C2F900F2662B /* UnitPickerTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6432321CD1C2F900F2662B /* UnitPickerTF.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +81,10 @@
 		DE6432251CCAF83400F2662B /* CDTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDTableViewController.swift; sourceTree = "<group>"; };
 		DE6432271CCC751000F2662B /* ShopTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTableViewController.swift; sourceTree = "<group>"; };
 		DE6432291CCD52F200F2662B /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		DE64322B1CD1AC3000F2662B /* UnitsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitsTableViewController.swift; sourceTree = "<group>"; };
+		DE64322D1CD1AF9700F2662B /* UnitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitViewController.swift; sourceTree = "<group>"; };
+		DE64322F1CD1BDCF00F2662B /* CDPickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDPickerTextField.swift; sourceTree = "<group>"; };
+		DE6432321CD1C2F900F2662B /* UnitPickerTF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitPickerTF.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,7 @@
 		DE6431C71CC5984200F2662B /* GroceriesApp */ = {
 			isa = PBXGroup;
 			children = (
+				DE6432311CD1C2D200F2662B /* Picker Text Fields */,
 				DE6432071CC7331700F2662B /* View Controllers */,
 				DE6431E71CC5C72D00F2662B /* Data Model */,
 				DE6431E41CC5ACA500F2662B /* Generic Core Data Classes */,
@@ -140,6 +149,7 @@
 				DE6432161CC87B7E00F2662B /* CDOperation.swift */,
 				DE6431E51CC5ACDE00F2662B /* CDHelper.swift */,
 				DE6432251CCAF83400F2662B /* CDTableViewController.swift */,
+				DE64322F1CD1BDCF00F2662B /* CDPickerTextField.swift */,
 			);
 			name = "Generic Core Data Classes";
 			sourceTree = "<group>";
@@ -173,8 +183,18 @@
 				DE64320C1CC86C0700F2662B /* PrepareTableTableViewController.swift */,
 				DE6432271CCC751000F2662B /* ShopTableViewController.swift */,
 				DE6432291CCD52F200F2662B /* ItemViewController.swift */,
+				DE64322B1CD1AC3000F2662B /* UnitsTableViewController.swift */,
+				DE64322D1CD1AF9700F2662B /* UnitViewController.swift */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DE6432311CD1C2D200F2662B /* Picker Text Fields */ = {
+			isa = PBXGroup;
+			children = (
+				DE6432321CD1C2F900F2662B /* UnitPickerTF.swift */,
+			);
+			name = "Picker Text Fields";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +271,8 @@
 			files = (
 				DE6432061CC72A0400F2662B /* Model2ToModel3.xcmappingmodel in Sources */,
 				DE6432281CCC751000F2662B /* ShopTableViewController.swift in Sources */,
+				DE64322E1CD1AF9700F2662B /* UnitViewController.swift in Sources */,
+				DE6432301CD1BDCF00F2662B /* CDPickerTextField.swift in Sources */,
 				DE6432221CCAE8BF00F2662B /* LocationAtShop.swift in Sources */,
 				DE64322A1CCD52F200F2662B /* ItemViewController.swift in Sources */,
 				DE6432031CC7279D00F2662B /* Amount+CoreDataProperties.swift in Sources */,
@@ -264,7 +286,9 @@
 				DE64320D1CC86C0700F2662B /* PrepareTableTableViewController.swift in Sources */,
 				DE6432231CCAE8BF00F2662B /* LocationAtHome+CoreDataProperties.swift in Sources */,
 				DE6432211CCAE8BF00F2662B /* LocationAtShop+CoreDataProperties.swift in Sources */,
+				DE6432331CD1C2F900F2662B /* UnitPickerTF.swift in Sources */,
 				DE6432041CC7279D00F2662B /* Amount.swift in Sources */,
+				DE64322C1CD1AC3000F2662B /* UnitsTableViewController.swift in Sources */,
 				DE6432201CCAE8BF00F2662B /* Location.swift in Sources */,
 				DE6431EE1CC6EBF400F2662B /* Item.swift in Sources */,
 				DE6432091CC7334E00F2662B /* MigrationViewController.swift in Sources */,
